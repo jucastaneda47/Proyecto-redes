@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: softphone-llamada
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: ACCOUNT_SID
+        value: ACb7bd7e0d44c8cda936b61706a5569619
+      - key: AUTH_TOKEN
+        value: 23a70217d94ad61a9d5617ad88c50ddc
+      - key: FROM_NUMBER
+        value: +19786439831
