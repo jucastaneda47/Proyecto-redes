@@ -29,3 +29,12 @@ def call():
         twiml='<Response><Say voice="alice" language="es-ES">Hola, esta es una llamada de prueba de Volpulse. Gracias por contestar.</Say></Response>'
     )
     return f"Llamada iniciada, SID: {llamada.sid}"
+
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+
+
+
