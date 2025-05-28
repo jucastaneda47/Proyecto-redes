@@ -3,9 +3,11 @@ from twilio.rest import Client
 
 app = Flask(__name__)
 
-ACCOUNT_SID = 'ACb7bd7e0d44c8cda936b61706a5569619'
-AUTH_TOKEN = '23a70217d94ad61a9d5617ad88c50ddc'
-FROM_NUMBER = '+19786439831'
+import os
+
+ACCOUNT_SID = os.environ.get("ACCOUNT_SID")
+AUTH_TOKEN = os.environ.get("AUTH_TOKEN")
+FROM_NUMBER = os.environ.get("FROM_NUMBER")
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
